@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor_pane_menu" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #ffffff;" stylesheets="@Menu.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.MenuController">
+   <children>
+      <Pane fx:id="area_menu" layoutX="243.0" prefHeight="900.0" prefWidth="1357.0" style="-fx-background-color: #ebe1e1;">
+         <children>
+            <Pane layoutY="54.0" prefHeight="70.0" prefWidth="1357.0" style="-fx-background-color: #003171;">
+               <children>
+                  <Label fx:id="label_info" layoutX="85.0" layoutY="17.0" prefHeight="34.0" prefWidth="300.0" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="19.0" layoutY="17.0" prefHeight="34.0" prefWidth="60.0" style="-fx-font-weight: bold;" text="Menu |" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <MaterialDesignIconView id="minimize" glyphName="MINUS" layoutX="1290.0" layoutY="45.0" onMouseClicked="#Minimizar" size="30" text="" wrappingWidth="34.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MaterialDesignIconView>
+            <MaterialDesignIconView id="close" glyphName="WINDOW_CLOSE" layoutX="1320.0" layoutY="45.0" onMouseClicked="#Sair" size="30">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MaterialDesignIconView>
+            <Pane fx:id="area_dashboard" layoutX="13.0" layoutY="211.0" prefHeight="647.0" prefWidth="1333.0" style="-fx-background-color: #fff;" />
+         </children>
+      </Pane>
+      <VBox prefHeight="900.0" prefWidth="243.0" style="-fx-background-color: #003171;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="124.0" prefWidth="243.0">
+               <children>
+                  <ImageView fitHeight="88.0" fitWidth="143.0" layoutX="72.0" layoutY="44.0" onMouseClicked="#menu" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/logo_parana.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+            <Pane prefHeight="65.0" prefWidth="243.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="24.0" prefHeight="27.0" prefWidth="111.0" style="-fx-font-weight: bold;" text="Dashboard" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ToggleButton alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="15.0" mnemonicParsing="false" onMouseClicked="#graficos" prefHeight="55.0" prefWidth="243.0" text="Gráficos" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="BAR_CHART_ALT" />
+               </graphic>
+               <padding>
+                  <Insets bottom="15.0" left="50.0" right="15.0" top="15.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="btn_grupo" />
+               </toggleGroup>
+            </ToggleButton>
+            <Pane prefHeight="65.0" prefWidth="243.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="24.0" prefHeight="27.0" prefWidth="85.0" style="-fx-font-weight: bold;" text="Cadastro" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Pane>
+            <ToggleButton alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="15.0" mnemonicParsing="false" onMouseClicked="#clientes" prefHeight="55.0" prefWidth="243.0" text="Clientes" textFill="WHITE" toggleGroup="$btn_grupo">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="USERS" />
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="15.0" left="50.0" right="15.0" top="15.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ToggleButton>
+            <ToggleButton alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="15.0" mnemonicParsing="false" onMouseClicked="#fornecedores" prefHeight="55.0" prefWidth="243.0" text="Fornecedores" textFill="WHITE" toggleGroup="$btn_grupo">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SHOPPING_BASKET">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></FontAwesomeIconView>
+               </graphic>
+               <padding>
+                  <Insets bottom="15.0" left="50.0" right="15.0" top="15.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ToggleButton>
+            <ToggleButton alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="15.0" mnemonicParsing="false" onMouseClicked="#produtos" prefHeight="55.0" prefWidth="243.0" text="Produtos" textFill="WHITE" toggleGroup="$btn_grupo">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CUBES" />
+               </graphic>
+               <padding>
+                  <Insets bottom="15.0" left="50.0" right="15.0" top="15.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ToggleButton>
+            <Pane prefHeight="65.0" prefWidth="243.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="24.0" prefHeight="27.0" prefWidth="85.0" style="-fx-font-weight: bold;" text="Saída" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ToggleButton alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="15.0" mnemonicParsing="false" onMouseClicked="#vendas" prefHeight="55.0" prefWidth="243.0" text="Vendas" textFill="WHITE" toggleGroup="$btn_grupo">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SHOPPING_CART" />
+               </graphic>
+               <padding>
+                  <Insets bottom="15.0" left="50.0" right="15.0" top="15.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ToggleButton>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

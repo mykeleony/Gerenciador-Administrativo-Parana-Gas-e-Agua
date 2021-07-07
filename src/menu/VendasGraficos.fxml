@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor_pane3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1357.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.VendasGraficosController">
+   <children>
+      <Pane fx:id="area_menu" prefHeight="900.0" prefWidth="1357.0" style="-fx-background-color: #ebe1e1;">
+         <children>
+            <MaterialDesignIconView id="minimize" glyphName="MINUS" layoutX="1290.0" layoutY="45.0" onMouseClicked="#Minimizar" size="30" text="" wrappingWidth="34.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MaterialDesignIconView>
+            <MaterialDesignIconView id="close" glyphName="WINDOW_CLOSE" layoutX="1320.0" layoutY="45.0" onMouseClicked="#Sair" size="30">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MaterialDesignIconView>
+            <Pane layoutY="54.0" prefHeight="70.0" prefWidth="1357.0" style="-fx-background-color: #003171;">
+               <effect>
+                  <DropShadow height="7.0" radius="3.0" width="7.0" />
+               </effect>
+               <children>
+                  <Label fx:id="label_info" layoutX="106.0" layoutY="17.0" prefHeight="34.0" prefWidth="300.0" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="19.0" layoutY="17.0" prefHeight="34.0" prefWidth="89.0" style="-fx-font-weight: bold;" text="Gráficos |" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="area_graficos" layoutX="13.0" layoutY="211.0" prefHeight="647.0" prefWidth="1333.0" style="-fx-background-color: #fff;">
+         <children>
+            <BarChart fx:id="barChart" layoutX="14.0" layoutY="14.0" prefHeight="615.0" prefWidth="849.0" style="-fx-font-size: 14;" title="Vendas">
+               <xAxis>
+                  <CategoryAxis fx:id="categoryAxis" label="Mês" side="BOTTOM">
+                     <tickLabelFont>
+                        <Font size="18.0" />
+                     </tickLabelFont>
+                  </CategoryAxis>
+               </xAxis>
+               <yAxis>
+                  <NumberAxis fx:id="numberAxis" label="Quantidade" side="LEFT" upperBound="1000.0">
+                     <tickLabelFont>
+                        <Font size="18.0" />
+                     </tickLabelFont>
+                  </NumberAxis>
+               </yAxis>
+            </BarChart>
+            <PieChart fx:id="piechart" layoutX="869.0" layoutY="105.0" prefHeight="424.0" prefWidth="450.0" style="-fx-font-size: 14;" />
+         </children></Pane>
+   </children>
+   <stylesheets>
+      <URL value="@Menu.css" />
+      <URL value="@Graficos.css" />
+   </stylesheets>
+</AnchorPane>

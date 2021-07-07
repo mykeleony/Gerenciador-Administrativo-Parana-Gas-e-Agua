@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="parent" prefHeight="550.0" prefWidth="830.0" stylesheets="@Login.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tcc.LoginController">
+   <children>
+      <Pane fx:id="area_registro" layoutX="401.0" prefHeight="550.0" prefWidth="429.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="401.0">
+         <children>
+            <JFXTextField fx:id="txt_usuario" focusColor="BLACK" layoutX="65.0" layoutY="205.0" prefHeight="30.0" prefWidth="305.0" promptText="Usuário" unFocusColor="BLACK">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="35.0" />
+               </padding>
+            </JFXTextField>
+            <JFXPasswordField fx:id="txt_senha" focusColor="BLACK" layoutX="65.0" layoutY="266.0" prefHeight="30.0" prefWidth="275.0" promptText="Senha" unFocusColor="BLACK">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="35.0" />
+               </padding>
+            </JFXPasswordField>
+            <JFXButton layoutX="70.0" layoutY="363.0" onAction="#Login" prefHeight="52.0" prefWidth="305.0" ripplerFill="#091f3b" text="Login" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Shadow height="44.75" radius="20.9375" width="41.0" />
+               </effect>
+            </JFXButton>
+            <Label layoutX="107.0" layoutY="432.0" prefHeight="18.0" prefWidth="151.0" text="Ainda não está registrado?" textFill="#464444">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <MaterialDesignIconView id="minimize" glyphName="MINUS" layoutX="365.0" layoutY="45.0" onMouseClicked="#minimizar" size="30" text="">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MaterialDesignIconView>
+            <MaterialDesignIconView id="close" glyphName="WINDOW_CLOSE" layoutX="395.0" layoutY="45.0" onMouseClicked="#sair" size="30">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MaterialDesignIconView>
+            <MaterialIconView glyphName="PERSON" layoutX="70.0" layoutY="233.0" size="25" />
+            <Label layoutX="266.0" layoutY="324.0" onMouseClicked="#alterar_senha" prefHeight="18.0" prefWidth="112.0" text="Esqueceu sua senha?" textFill="#464444" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label layoutX="70.0" layoutY="111.0" prefHeight="34.0" prefWidth="305.0" text="Gerenciador Administrativo">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <MaterialDesignIconView glyphName="LOCK" layoutX="70.0" layoutY="292.0" size="25" />
+            <Label layoutX="264.0" layoutY="432.0" onMouseClicked="#registrar" prefHeight="18.0" prefWidth="80.0" text="Registrar-se" textFill="#003171">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <JFXTextField fx:id="txt_mostrar_senha" focusColor="BLACK" layoutX="65.0" layoutY="266.0" prefHeight="30.0" prefWidth="305.0" promptText="Senha" unFocusColor="BLACK" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="35.0" />
+               </padding>
+            </JFXTextField>
+            <MaterialDesignIconView fx:id="icon_exibir" glyphName="EYE" layoutX="345.0" layoutY="292.0" onMouseClicked="#exibir_senha" size="25">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MaterialDesignIconView>
+            <JFXCheckBox fx:id="lembrar" checkedColor="#003171" layoutX="70.0" layoutY="324.0" text="Lembrar-me" />
+         </children>
+      </Pane>
+      <Pane prefHeight="550.0" prefWidth="401.0" style="-fx-background-color: #003171;">
+         <children>
+            <ImageView fitHeight="219.0" fitWidth="235.0" layoutX="83.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/logo_parana.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,46 @@
+.toggle-button{
+    -fx-background-color: #003171; 
+}
+    
+.toggle-button:hover {    
+    -fx-background-color: #033e8c;
+}
+
+.toggle-button:selected {    
+    -fx-background-color: #091f3b;
+}
+
+.button{
+    -fx-background-color: #003171; 
+    -fx-text-fill: white;
+}
+    
+.button:hover {    
+    -fx-background-color: #033e8c;
+}
+
+.button:pressed {    
+    -fx-background-color: #091f3b;
+}
+
+#area_cadastro1, #area_cadastro2, #area_cadastro3, #area_dashboard, #area_graficos{
+    -fx-border-color: #003171;
+}
+
+#close:hover{    
+    -fx-fill: #9cbff7;
+}
+
+#minimize:hover{    
+    -fx-fill: #9cbff7;
+}
+
+.combo-box-popup .list-view .list-cell:filled:hover {
+    -fx-background-color: #003171;
+    -fx-text-fill: white;
+}
+
+.combo-box-popup .list-view .list-cell:selected{
+    -fx-background-color: #003171;
+    -fx-text-fill: white;
+}

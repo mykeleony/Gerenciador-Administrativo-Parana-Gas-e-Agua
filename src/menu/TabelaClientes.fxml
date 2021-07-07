@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="647.0" prefWidth="1333.0" style="-fx-background-color: #ffffff;" stylesheets="@Tabela.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.TabelaClientesController">
+   <children>
+      <Pane prefHeight="647.0" prefWidth="1333.0" style="-fx-background-color: #fff; -fx-border-color: #003171;">
+         <children>
+            <TableView fx:id="tabela_clientes" editable="true" focusTraversable="false" layoutX="2.0" layoutY="18.0" prefHeight="552.0" prefWidth="1329.0">
+              <columns>
+                <TableColumn fx:id="col_cpf" prefWidth="175.0" text="CPF" />
+                <TableColumn fx:id="col_nome" prefWidth="175.0" text="Nome" />
+                  <TableColumn fx:id="col_email" prefWidth="175.0" text="E-mail" />
+                  <TableColumn fx:id="col_endereco" minWidth="0.0" prefWidth="175.0" text="Endereço" />
+                  <TableColumn fx:id="col_numero" prefWidth="175.0" text="Número" />
+                  <TableColumn fx:id="col_complemento" prefWidth="175.0" text="Complemento" />
+                  <TableColumn fx:id="col_bairro" prefWidth="175.0" text="Bairro" />
+                  <TableColumn fx:id="col_cidade" prefWidth="175.0" text="Cidade" />
+                  <TableColumn fx:id="col_telefone_fixo" prefWidth="175.0" text="Tel. Fixo" />
+                  <TableColumn fx:id="col_telefone_celular" prefWidth="175.0" text="Tel. Celular" />
+                  <TableColumn fx:id="col_data_cadastro" prefWidth="175.0" text="Data de Cadastro" />
+              </columns>
+            </TableView>
+            <JFXButton focusTraversable="false" layoutX="24.0" layoutY="590.0" onMouseClicked="#Atualizar" prefHeight="30.0" prefWidth="74.0" ripplerFill="#091f3b" text="Alterar" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton focusTraversable="false" layoutX="112.0" layoutY="590.0" onMouseClicked="#Deletar" prefHeight="30.0" prefWidth="74.0" ripplerFill="#091f3b" text="Excluir" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton focusTraversable="false" layoutX="200.0" layoutY="590.0" onAction="#handleImprimir" prefHeight="30.0" prefWidth="74.0" ripplerFill="#091f3b" text="Imprimir" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <TextField fx:id="pesquisa" focusTraversable="false" layoutX="288.0" layoutY="590.0" prefHeight="30.0" prefWidth="386.0" promptText="Pesquisar...">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="35.0" />
+               </padding>
+            </TextField>
+            <FontAwesomeIconView glyphName="SEARCH" layoutX="300.0" layoutY="610.0" size="16" />
+         </children></Pane>
+   </children>
+</AnchorPane>

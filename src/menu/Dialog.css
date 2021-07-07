@@ -1,0 +1,106 @@
+#close:hover{    
+    -fx-fill: #9cbff7;
+}
+
+#minimize:hover{    
+    -fx-fill: #9cbff7;
+}
+
+#buttonAdicionar{
+    -fx-background-color: #003171; 
+    -fx-text-fill: white;
+}
+
+#buttonAdicionar:hover {    
+    -fx-background-color: #033e8c;
+}
+
+#buttonAdicionar:pressed {    
+    -fx-background-color: #091f3b;
+}
+
+#buttonConfirmar{
+    -fx-background-color: #003171; 
+    -fx-text-fill: white;
+}
+
+#buttonConfirmar:hover {    
+    -fx-background-color: #033e8c;
+}
+
+#buttonConfirmar:pressed {    
+    -fx-background-color: #091f3b;
+}
+
+#buttonCancelar{
+    -fx-background-color: #003171; 
+    -fx-text-fill: white;
+}
+
+#buttonCancelar:hover {    
+    -fx-background-color: #033e8c;
+}
+
+#buttonCancelar:pressed {    
+    -fx-background-color: #091f3b;
+}
+
+
+.table-view:focused{
+    -fx-background-color: white;
+}
+
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-background-color:  #003171; 
+}
+.table-view .column-header .label{
+   -fx-text-fill: white;
+   -fx-font-weight: bold; 
+   -fx-font-size: 14;
+   -fx-alignment: CENTER;
+}
+
+.table-view .cell{
+   -fx-font-size: 14;
+   -fx-cell-size: 35;
+   -fx-text-fill: black;
+   -fx-alignment: CENTER;   
+} 
+
+.table-row-cell:selected .table-cell {
+    -fx-background-color: #cadbe0;
+    -fx-table-cell-border-color: transparent;
+}
+
+/* scroll bar starts here */
+
+/* The increment and decrement button CSS class of scrollbar */
+.table-view .increment-button ,.table-view .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 2em;
+    -fx-font-size: 12;
+}
+
+/* The main scrollbar **track** CSS class  */
+.table-view .scroll-bar:horizontal .track,
+.table-view .scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: #ebe1e1;
+    -fx-background-radius: 2em;
+    -fx-border-radius:2em;
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.table-view .scroll-bar:horizontal .thumb,
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color: #003171;
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;
+}
+
+/*.text-field{
+    -fx-focus-color: #003171;
+}*/
+
+

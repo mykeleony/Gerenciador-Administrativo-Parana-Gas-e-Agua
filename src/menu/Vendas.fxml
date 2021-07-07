@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1357.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.VendasController">
+   <children>
+      <Pane prefHeight="900.0" prefWidth="1357.0" style="-fx-background-color: #ebe1e1;">
+         <children>
+            <MaterialDesignIconView id="minimize" glyphName="MINUS" layoutX="1290.0" layoutY="45.0" onMouseClicked="#Minimizar" size="30" text="" wrappingWidth="34.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MaterialDesignIconView>
+            <MaterialDesignIconView id="close" glyphName="WINDOW_CLOSE" layoutX="1320.0" layoutY="45.0" onMouseClicked="#Sair" size="30">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MaterialDesignIconView>
+            <Pane layoutY="54.0" prefHeight="70.0" prefWidth="1357.0" style="-fx-background-color: #003171;">
+               <effect>
+                  <DropShadow height="7.0" radius="3.0" width="7.0" />
+               </effect>
+               <children>
+                  <Label fx:id="label_info" layoutX="97.0" layoutY="17.0" prefHeight="34.0" prefWidth="300.0" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="19.0" layoutY="17.0" prefHeight="34.0" prefWidth="79.0" style="-fx-font-weight: bold;" text="Vendas |" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="13.0" layoutY="211.0" prefHeight="647.0" prefWidth="1333.0" style="-fx-background-color: #fff;">
+               <children>
+                  <SplitPane dividerPositions="0.4996237772761475" prefHeight="647.0" prefWidth="1333.0" style="-fx-border-color: #003171;">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <TableView fx:id="tabela_vendas" layoutX="131.0" layoutY="79.0" prefHeight="643.0" prefWidth="662.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="col_codigo" prefWidth="125.0" text="Código" />
+                                  <TableColumn fx:id="col_data" prefWidth="268.0" text="Data" />
+                                    <TableColumn fx:id="col_cliente" prefWidth="268.0" text="Cliente" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="645.0" prefWidth="474.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label layoutX="252.0" layoutY="71.0" prefHeight="39.0" prefWidth="160.0" text="Detalhes da Venda" AnchorPane.topAnchor="50.0">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <GridPane layoutX="196.0" layoutY="194.0" prefHeight="257.0" prefWidth="272.0" AnchorPane.bottomAnchor="194.0" AnchorPane.topAnchor="194.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="91.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="162.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label text="Código">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Data" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Valor" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Cliente" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbl_codigo_ven" text="Label" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbl_data" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbl_valor" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbl_cliente" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                              <Group layoutX="152.0" layoutY="536.0">
+                                 <children>
+                                    <Group />
+                                 </children>
+                              </Group>
+                              <Button fx:id="btn_inserir" layoutX="152.0" layoutY="555.0" mnemonicParsing="false" onAction="#handleButtonInserir" prefHeight="30.0" prefWidth="95.0" text="Inserir" textFill="WHITE" AnchorPane.bottomAnchor="50.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btn_alterar" layoutX="284.0" layoutY="555.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="95.0" text="Alterar" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="50.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btn_excluir" layoutX="416.0" layoutY="555.0" mnemonicParsing="false" onAction="#handleButtonRemover" prefHeight="30.0" prefWidth="95.0" text="Excluir" textFill="WHITE" AnchorPane.bottomAnchor="50.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@Tabela.css" />
+      <URL value="@Menu.css" />
+   </stylesheets>
+</AnchorPane>
