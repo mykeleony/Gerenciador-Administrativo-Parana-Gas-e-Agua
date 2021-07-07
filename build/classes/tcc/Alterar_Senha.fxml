@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="429.0" stylesheets="@Login.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tcc.Alterar_SenhaController">
+   <children>
+      <JFXTextField fx:id="txt_user" focusColor="BLACK" layoutX="65.0" layoutY="196.0" prefHeight="30.0" prefWidth="305.0" promptText="Usuário" unFocusColor="BLACK">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="35.0" />
+         </padding>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txt_senha" focusColor="BLACK" layoutX="65.0" layoutY="257.0" prefHeight="30.0" prefWidth="275.0" promptText="Nova Senha" unFocusColor="BLACK">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <padding>
+            <Insets left="35.0" />
+         </padding>
+      </JFXPasswordField>
+      <JFXPasswordField fx:id="txt_confirmasenha" focusColor="BLACK" layoutX="65.0" layoutY="318.0" prefHeight="30.0" prefWidth="275.0" promptText="Confirmar Senha" unFocusColor="BLACK">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <padding>
+            <Insets left="35.0" />
+         </padding>
+      </JFXPasswordField>
+      <JFXButton layoutX="70.0" layoutY="405.0" onAction="#alterar" prefHeight="52.0" prefWidth="305.0" ripplerFill="#091f3b" text="Alterar" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <MaterialDesignIconView id="minimize" glyphName="MINUS" layoutX="365.0" layoutY="45.0" onMouseClicked="#minimizar" size="30" text="">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MaterialDesignIconView>
+      <MaterialDesignIconView id="close" glyphName="WINDOW_CLOSE" layoutX="395.0" layoutY="45.0" onMouseClicked="#sair" size="30">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MaterialDesignIconView>
+      <Label alignment="TOP_CENTER" layoutX="148.0" layoutY="111.0" prefHeight="34.0" prefWidth="149.0" text="Alterar Senha" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <MaterialDesignIconView glyphName="LOCK" layoutX="70.0" layoutY="283.0" size="25" />
+      <MaterialIconView glyphName="PERSON" layoutX="70.0" layoutY="224.0" size="25" />
+      <MaterialDesignIconView glyphName="LOCK" layoutX="70.0" layoutY="342.0" size="25" />
+      <MaterialDesignIconView id="voltar_login" glyphName="ARROW_LEFT" layoutX="4.0" layoutY="45.0" onMouseClicked="#voltar" size="30">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MaterialDesignIconView>
+      <JFXTextField fx:id="txt_mostrar_senha" focusColor="BLACK" layoutX="65.0" layoutY="257.0" prefHeight="30.0" prefWidth="275.0" unFocusColor="BLACK" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="35.0" />
+         </padding>
+      </JFXTextField>
+      <JFXTextField fx:id="txt_mostrar_confirmasenha" focusColor="BLACK" layoutX="65.0" layoutY="318.0" prefHeight="30.0" prefWidth="275.0" unFocusColor="BLACK" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="35.0" />
+         </padding>
+      </JFXTextField>
+      <MaterialDesignIconView glyphName="EYE" layoutX="345.0" layoutY="342.0" onMouseClicked="#exibir_confirmasenha" size="25">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MaterialDesignIconView>
+      <MaterialDesignIconView glyphName="EYE" layoutX="345.0" layoutY="283.0" onMouseClicked="#exibir_senha" size="25">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MaterialDesignIconView>
+   </children>
+</AnchorPane>

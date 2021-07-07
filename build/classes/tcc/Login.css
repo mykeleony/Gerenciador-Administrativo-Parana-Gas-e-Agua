@@ -1,0 +1,23 @@
+.button{
+    -fx-background-color: #003171; 
+}
+
+.button:hover {    
+    -fx-background-color: #033e8c;
+}
+
+.button:pressed {    
+    -fx-background-color: #091f3b;
+}
+
+#close:hover{ 
+    -fx-fill: #9cbff7; 
+}
+
+#minimize:hover {
+    -fx-fill: #9cbff7;
+}
+
+#voltar_login:hover {
+    -fx-fill: #9cbff7;
+}
