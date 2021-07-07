@@ -1,4 +1,4 @@
-# Gerenciador Informacional Para a Empresa Paraná Gás e Água
+# Gerenciador Administrativo Para a Empresa Paraná Gás e Água
 ![telas](https://user-images.githubusercontent.com/81399071/124798980-64eff500-df2a-11eb-8ea1-c53b5aae6c24.png)
 Documentação completa do projeto [aqui](https://drive.google.com/drive/u/0/folders/11lAApdsWBylxmZGAG5Tb1_heZZqYnmAx).
 
