@@ -1,5 +1,6 @@
 # Gerenciador administrativo para a empresa Paraná Gás e Água
-![telas](https://user-images.githubusercontent.com/81399071/124798980-64eff500-df2a-11eb-8ea1-c53b5aae6c24.png)
+![Background (1)](https://user-images.githubusercontent.com/81399071/124854599-f2106980-df7d-11eb-9d89-1bb066821bfb.png)
+
 Documentação completa do projeto [aqui](https://drive.google.com/drive/u/0/folders/11lAApdsWBylxmZGAG5Tb1_heZZqYnmAx).
 
 
